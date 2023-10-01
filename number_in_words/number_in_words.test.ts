@@ -122,5 +122,3 @@ describe('numberInWords', () => {
     expect(numberInWords("009")).toBe("nine");
   });
 });
-
-  
