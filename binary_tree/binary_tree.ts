@@ -24,7 +24,7 @@ class BinaryTree {
     if (this.uniqueNumbers[value]) {
       throw new Error('This value already exists in the tree');
     }
-    
+
     this.uniqueNumbers[value] = true;
 
     if (this.root === null) {
