@@ -92,9 +92,6 @@ function isCorrectTree(node: Node1 | null, min: number | null, max: number | nul
     }
   }
 
-
-
-
   return isCorrectTree(node.left, null, max, false) && isCorrectTree(node.right, min, null, false);
 }
 
