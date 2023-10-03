@@ -19,7 +19,7 @@
 // Input: nums = [3,3], target = 6
 // Output: [0,1]
 
-//lets assume we dont wont to use the same element twice
+//lets assume we dont want to use the same element twice
 function twoSum(nums: Array<number>, target: number): Array<number> {
     if (!Array.isArray(nums) || nums.length < 2) {
         return []
