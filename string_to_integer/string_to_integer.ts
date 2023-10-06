@@ -1,5 +1,5 @@
 const MIN_NUM = (-2) ** 31
-const MAX_NUM =  2 ** 31 - 1
+const MAX_NUM = 2 ** 31 - 1
 
 //alternative way of myAtoi without parseInt
 function myAtoi(s: string): number {
@@ -13,8 +13,8 @@ function myAtoi(s: string): number {
         left++
     }
 
-    if ((s[left] === "-" ||  s[left] == "+" ) && left != s.length) {
-       if (s[left] === "-" ) sign = -1
+    if ((s[left] === "-" || s[left] == "+") && left != s.length) {
+        if (s[left] === "-") sign = -1
         left++
     }
 
@@ -23,15 +23,15 @@ function myAtoi(s: string): number {
     }
 
     while (/[0-9]/.test(s[left]) && left != s.length) {
-       num =  num  * 10 + ( + s[left])
+        num = num * 10 + (+ s[left])
         left++
     }
 
     if (!num) return 0;
 
     num = num * sign;
-    if(num < MIN_NUM) return MIN_NUM
-    if(num > MAX_NUM) return MAX_NUM
+    if (num < MIN_NUM) return MIN_NUM
+    if (num > MAX_NUM) return MAX_NUM
 
     return num
 };
