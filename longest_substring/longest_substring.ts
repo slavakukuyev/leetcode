@@ -1,4 +1,4 @@
-function lengthOfLongestSubstring(s: string): number {
+function lengthOfLongestSubstring1(s: string): number {
   if (s.length < 2) return s.length
 
   let map = new Map<string, number>()
@@ -63,4 +63,4 @@ function lengthOfLongestSubstring3(s: string): number {
   return max;
 }
 
-export { lengthOfLongestSubstring, lengthOfLongestSubstring2, lengthOfLongestSubstring3 }
+export { lengthOfLongestSubstring1, lengthOfLongestSubstring2, lengthOfLongestSubstring3 }
