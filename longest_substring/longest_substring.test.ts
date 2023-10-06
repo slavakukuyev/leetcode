@@ -1,47 +1,44 @@
-import {lengthOfLongestSubstring,lengthOfLongestSubstring2, lengthOfLongestSubstring3} from './longest_substring';
+import { lengthOfLongestSubstring, lengthOfLongestSubstring2, lengthOfLongestSubstring3 } from './longest_substring';
 
 describe('lengthOfLongestSubstring', () => {
+  // Returns the length of the longest substring without repeating characters
+  it('should return the length of the longest substring without repeating characters', () => {
+    expect(lengthOfLongestSubstring('abcabcbb')).toBe(3);
+    expect(lengthOfLongestSubstring('bbbbb')).toBe(1);
+    expect(lengthOfLongestSubstring('pwwkew')).toBe(3);
+  });
 
-    // Returns the length of the longest substring without repeating characters
-    it('should return the length of the longest substring without repeating characters', () => {
-      expect(lengthOfLongestSubstring('abcabcbb')).toBe(3);
-      expect(lengthOfLongestSubstring('bbbbb')).toBe(1);
-      expect(lengthOfLongestSubstring('pwwkew')).toBe(3);
-    });
+  // Returns the length of the string if all characters are unique
+  it('should return the length of the string if all characters are unique', () => {
+    expect(lengthOfLongestSubstring('abcdefghijklmnopqrstuvwxyz')).toBe(26);
+  });
 
-    // Returns the length of the string if all characters are unique
-    it('should return the length of the string if all characters are unique', () => {
-      expect(lengthOfLongestSubstring('abcdefghijklmnopqrstuvwxyz')).toBe(26);
-    });
+  // Returns 0 for an empty string
+  it('should return 0 for an empty string', () => {
+    expect(lengthOfLongestSubstring('')).toBe(0);
+  });
 
-    // Returns 0 for an empty string
-    it('should return 0 for an empty string', () => {
-      expect(lengthOfLongestSubstring('')).toBe(0);
-    });
+  // Returns 1 for a string with only one character
+  it('should return 1 for a string with only one character', () => {
+    expect(lengthOfLongestSubstring('a')).toBe(1);
+  });
 
-    // Returns 1 for a string with only one character
-    it('should return 1 for a string with only one character', () => {
-      expect(lengthOfLongestSubstring('a')).toBe(1);
-    });
+  // Returns the length of the longest substring without repeating characters
+  it('should return the length of the longest substring without repeating characters', () => {
+    expect(lengthOfLongestSubstring('bbbbbb')).toBe(1);
+    expect(lengthOfLongestSubstring('abcabcbb')).toBe(3);
+    expect(lengthOfLongestSubstring('pwwkew')).toBe(3);
+    expect(lengthOfLongestSubstring('')).toBe(0);
+  });
 
-    // Returns the length of the longest substring without repeating characters
-    it('should return the length of the longest substring without repeating characters', () => {
-          expect(lengthOfLongestSubstring('bbbbbb')).toBe(1);
-          expect(lengthOfLongestSubstring('abcabcbb')).toBe(3);
-          expect(lengthOfLongestSubstring('pwwkew')).toBe(3);
-          expect(lengthOfLongestSubstring('')).toBe(0);
-        });
-
-    // Returns the correct length for a string with repeating characters at the beginning or end
-    it('should return the correct length for a string with repeating characters at the beginning or end', () => {
-      expect(lengthOfLongestSubstring('aab')).toBe(2);
-      expect(lengthOfLongestSubstring('bba')).toBe(2);
-    });
+  // Returns the correct length for a string with repeating characters at the beginning or end
+  it('should return the correct length for a string with repeating characters at the beginning or end', () => {
+    expect(lengthOfLongestSubstring('aab')).toBe(2);
+    expect(lengthOfLongestSubstring('bba')).toBe(2);
+  });
 });
 
-
 describe('lengthOfLongestSubstring2', () => {
-
   // Returns 0 for empty string input
   it('should return 0 when input is an empty string', () => {
     expect(lengthOfLongestSubstring2('')).toBe(0);
@@ -73,9 +70,7 @@ describe('lengthOfLongestSubstring2', () => {
   });
 });
 
-
 describe('lengthOfLongestSubstring3', () => {
-
   // returns the correct length of longest substring without repeating characters
   it('should return the correct length of longest substring without repeating characters when given a string with repeating characters', () => {
     expect(lengthOfLongestSubstring3("abcabcbb")).toBe(3);
