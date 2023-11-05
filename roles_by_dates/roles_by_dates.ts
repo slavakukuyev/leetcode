@@ -1,5 +1,10 @@
 import { Role } from './role';
-
+/**
+ * Updates map with role if it is effective from the given date
+ * @param map  map of dates and roles
+ * @param role  role to be added to the map
+ * @param dates  list of dates
+ */
 function updateMap(map: Map<Date, Role>, role: Role, dates: Array<Date>) {
     for (let i = 0; i < dates.length; i++) {
         let date = dates[i];
@@ -36,7 +41,7 @@ function getRolesByDate(history: Array<Role>, dates: Array<Date>) {
 
 // let rolesHistory = [
 //     new Role('Team Leader', new Date(2020, 7, 1)),
-//     new Role('Sraff Engineer', new Date(2022, 7, 1)),
+//     new Role('Staff Engineer', new Date(2022, 7, 1)),
 
 //     new Role('Fullstack developer', new Date(2016, 4, 15)),
 //     new Role('Frontend developer', new Date(2014, 10, 17)),
