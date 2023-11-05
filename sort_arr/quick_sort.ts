@@ -1,5 +1,5 @@
 
-function mergeSort(arr: Array<number>): Array<number> {    
+function quickSort(arr: Array<number>): Array<number> {    
     if(arr.length < 2) {
         return arr
     }
@@ -13,13 +13,8 @@ function mergeSort(arr: Array<number>): Array<number> {
             right.push(arr[i])
         }
     }
-    return [...mergeSort(left), pivot, ...mergeSort(right)]
+    return [...quickSort(left), pivot, ...quickSort(right)]
 
 }
 
-let arr = [5,3,48,5,1,2]
-arr = mergeSort(arr)
-console.log(arr)
-
-
-export { mergeSort} ;
+export { quickSort} ;
