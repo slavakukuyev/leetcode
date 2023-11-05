@@ -25,7 +25,7 @@ function updateMap(map: Map<Date, Role>, role: Role, dates: Array<Date>) {
  * @param history Employee role history not-sorted
  * @param dates list of dates
  */
-function getRolesByDate(history: Array<Role>, dates: Array<Date>) {
+function getRolesByDates(history: Array<Role>, dates: Array<Date>) {
     // your code here
     //loop on history
 
@@ -55,10 +55,10 @@ function getRolesByDate(history: Array<Role>, dates: Array<Date>) {
 //     new Date(2022, 9, 1),
 // ];
 
-// let rolesByDates = getRolesByDate(rolesHistory, dates);
+// let rolesByDates = getRolesByDates(rolesHistory, dates);
 
 // rolesByDates.forEach((role, date) =>
 //     console.log(`date = ${date}, role = ${role.getTitle()}`)
 // );
 
-export { getRolesByDate, updateMap };
+export { getRolesByDates, updateMap };

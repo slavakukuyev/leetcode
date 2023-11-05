@@ -1,5 +1,5 @@
 import { Role } from './role';
-import { updateMap, getRolesByDate } from './roles_by_dates';
+import { updateMap, getRolesByDates } from './roles_by_dates';
 
 describe('updateMap', () => {
   it('should add a role to the map if the date is greater than or equal to the effective date of the role', () => {
@@ -87,7 +87,7 @@ describe('updateMap', () => {
   });   
 });
 
-describe('getRolesByDate', () => {
+describe('getRolesByDates', () => {
     it('should return a map of roles by dates', () => {
         // Arrange
         const roles = [
@@ -97,7 +97,7 @@ describe('getRolesByDate', () => {
         const dates = [new Date("2020-01-14"), new Date("2020-01-15"), new Date("2020-01-16"), new Date("2020-01-17")];
     
         // Act
-        const map = getRolesByDate(roles, dates);
+        const map = getRolesByDates(roles, dates);
     
         // Assert
         expect(map.get(dates[0])).toBeUndefined();
@@ -117,7 +117,7 @@ describe('getRolesByDate', () => {
         const dates = [new Date("2020-01-14"), new Date("2020-01-15"), new Date("2020-01-16"), new Date("2020-01-17"), new Date("2020-01-18")];
     
         // Act
-        const map = getRolesByDate(roles, dates);
+        const map = getRolesByDates(roles, dates);
     
         // Assert
         expect(map.get(dates[0])).toBeUndefined();
@@ -137,7 +137,7 @@ describe('getRolesByDate', () => {
         const dates:Array<Date> = [];
     
         // Act
-        const map = getRolesByDate(roles, dates);
+        const map = getRolesByDates(roles, dates);
     
         // Assert
         expect(map.size).toBe(0);
